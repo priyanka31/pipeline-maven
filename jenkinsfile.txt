@@ -1,0 +1,10 @@
+pipeline{
+	stages{
+		stage('deploy stage'){
+			echo "Entered deploy stage!"
+		}
+		stage('Test stage'){
+			echo "Entered test stage!"
+		}
+	}
+}
