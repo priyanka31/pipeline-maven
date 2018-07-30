@@ -2,9 +2,15 @@ pipeline{
 	stages{
 		stage('deploy stage'){
 			echo "Entered deploy stage!"
+			steps{
+				echo "Entered deploy stage>step!"
+				withMaven(maven : 'Maven_3.5.4_installation')
+				echo 'mvn clean install'
+			}
 		}
 		stage('Test stage'){
 			echo "Entered test stage!"
 		}
+		
 	}
 }
